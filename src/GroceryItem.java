@@ -1,12 +1,11 @@
 // class to represent a grocery item
-// class to represent a grocery item
 import java.util.*;
 public class GroceryItem
 {
   String item;
   int amount;
-  int rate;
-  public GroceryItem(String name, int quantity, double pticePerUnit)
+  double rate;
+  public GroceryItem(String name, int quantity, double pricePerUnit)
   {
     item=name;
     amount=quantity;
@@ -14,9 +13,14 @@ public class GroceryItem
   }
   public double getCost()
   {
-    return (rate*amount)
+    return (rate*amount);
   }
   public void setQuantity(int quantity)
   {
     amount=quantity;
   }
+  public String toString()
+  {
+    return amount+" "+item.toString()+" @ "+rate+" = "+getCost();
+  }
+}
